@@ -26,4 +26,3 @@ function content(destinations) {
 }
 console.log(MainWrapper);
 
-// Nået til 26:55 i Steens URL 1 video.

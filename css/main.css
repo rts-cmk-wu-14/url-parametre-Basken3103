@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+#main-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#main-wrapper figure {
+    width: 33.33%;
+}
