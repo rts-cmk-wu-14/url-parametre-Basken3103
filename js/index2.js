@@ -3,14 +3,14 @@ const url = "./data/destinations.json"
 let heartList = []
 
 async function getData(url) {
-    let res = await fetch(url)
-    let data = await res.json()
+  let res = await fetch(url)
+  let data = await res.json()
 
-    const content =/*html*/ `
+  const content =/*html*/ `
     <h1 class="destinations-header"> Apartments for rent </h1>
     <div class="destinations">
        ${data.destinations.map((destination) => {
-        return /*html*/ `
+    return /*html*/ `
            <figure class="destination">
               <div class="destination_img-wrapper">
                    <img src="./img/${destination.image}" alt="${destination.title}" class="destination_img"> 
@@ -33,15 +33,18 @@ async function getData(url) {
               </figcaption>
             </figure>
            `
-    }).join("")} 
+  }).join("")} 
     </div>
 `
 
-    // Nået til 3:52 i Steens video
+  wrapper.insertAdjacentHTML("beforeend", content) //
+
+  const hearts = wrapper.querySelectorAll(`[data-id]`) // get all hearts from DOM
+  console.log(hearts);
 
 
-
-
-
-
+  createLocalStorage(hearts, "heartList", true)
+  handleHeart(hearts) //
+  updateHeartsDom("heartList", hearts) // Remember which links are active, and add class active
 }
+getData(url)
