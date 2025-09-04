@@ -55,11 +55,14 @@ function handleHeartClick(event) {
 function updateHeartsDom(key) {
     const heartLocalStorage = getLocalItem(key)
 
+
+
     heartLocalStorage.forEach((elm) => {
 
         const heartDom = document.querySelector(`[data-id="${elm.id}"]`);
         if (!heartDom) {
-            //console.warn("Intet DOM-element fundet til index");
+
+            console.warn("Intet DOM-element fundet til index");
             return;
         }
 
@@ -67,7 +70,7 @@ function updateHeartsDom(key) {
     })
 }
 
-// Er nået til 28:24 i Steens URL 3 - video.
+
 
 
 

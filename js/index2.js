@@ -5,6 +5,8 @@ let heartList = []
 async function getData(url) {
   let res = await fetch(url)
   let data = await res.json()
+  console.log(data);
+
 
   const content =/*html*/ `
     <h1 class="destinations-header"> Apartments for rent </h1>
@@ -45,6 +47,6 @@ async function getData(url) {
 
   createLocalStorage(hearts, "heartList", true)
   handleHeart(hearts) //
-  // updateHeartsDom("heartList", hearts) // Remember which links are active, and add class active
+  updateHeartsDom("heartList", hearts) // Remember which links are active, and add class active
 }
 getData(url)
