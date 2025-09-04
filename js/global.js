@@ -12,4 +12,4 @@ function removeLocalItem(key) {
     localStorage.removeItem(key)
 }
 
-// Nået til 11:33 i Steens video - URL 3
+

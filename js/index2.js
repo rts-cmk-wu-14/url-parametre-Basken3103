@@ -40,11 +40,11 @@ async function getData(url) {
   wrapper.insertAdjacentHTML("beforeend", content) //
 
   const hearts = wrapper.querySelectorAll(`[data-id]`) // get all hearts from DOM
-  console.log(hearts);
+  // console.log(hearts);
 
 
   createLocalStorage(hearts, "heartList", true)
   handleHeart(hearts) //
-  updateHeartsDom("heartList", hearts) // Remember which links are active, and add class active
+  // updateHeartsDom("heartList", hearts) // Remember which links are active, and add class active
 }
 getData(url)
